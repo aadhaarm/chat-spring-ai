@@ -18,7 +18,7 @@ A chatbot application built to provide fintech advice (e.g., fraud detection) an
 3. **Run**:
    - Start FastAPI: `uvicorn api_gpt2:app --host 0.0.0.0 --port 8001`
    - Start Spring Boot: `mvn spring-boot:run`
-   - Test endpoints: `/fintech-chat` and `/music-chat`.
+   - Test endpoints: `/chat`.
 
 ## Challenges Overcome
 - Configured Python 3.10 on Ubuntu 24.04 with virtual environments.
@@ -28,3 +28,10 @@ A chatbot application built to provide fintech advice (e.g., fraud detection) an
 ## Future Improvements
 - Host larger models (e.g., LLaMA 13B) on a more powerful system.
 - Explore cloud deployment with AWS.
+
+## Updates (May 28, 2025)
+- Successfully upgraded to LLaMA 7B on my Ubuntu 24.04.2 LTS system (i3-2100, 8GB RAM, RTX 3070 GPU).
+- Improved response quality for fintech (fraud detection) and music (tabla playlists) queries using LLaMA 7B (quantized, ~5-6GB VRAM with 4-bit quantization).
+- Fixed generation issues by adding a system instruction, updating `max_length` to 200, and removing prompt repetition in FastAPI output.
+- Changed FastAPI port to 8081 and updated Spring AI configuration with the correct IP (192.168.68.73).
+- Maintained integration with Spring AI via FastAPI, achieving ~5-10 tokens/second.
