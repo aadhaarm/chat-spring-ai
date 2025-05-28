@@ -15,7 +15,7 @@ public class ChatConfig {
     @Bean
     public ChatModel chatModel() {
         // Replace with your Ubuntu machine's IP
-        return new CustomRestChatModel("http://192.168.68.73:8001/generate");
+        return new CustomRestChatModel("http://192.168.68.73:8081/generate");
     }
 }
 
